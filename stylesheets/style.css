@@ -1,0 +1,93 @@
+/* GENERAL */
+
+.flex {
+  display: flex;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.bg-black {
+  background: black;
+  color: white;
+}
+
+/* HEADER */
+
+header {
+  display: grid;
+  grid-template-columns: 106px 1fr;
+}
+
+header .logo {
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+header .logo img {
+  width: 66px;
+  height: 16px;
+}
+
+header ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline;
+  margin: 0 1em;
+}
+
+.top-nav {
+  font-size: 13px;
+}
+
+.bot-nav {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .sm-hide {
+    display: none !important;
+  }
+
+  .jc-flex-end-sm {
+    justify-content: flex-end !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .lg-hide {
+    display: none !important;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <title>TNW</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="normalize.css" type="text/css" media="all">
-  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css" media="all">
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all">
   <script src="https://kit.fontawesome.com/3acba5e40e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <div class="logo lg-hide">
-      TNW
+    <div class="lg-hide logo bg-black">
+      <img src="images/tnw.svg" alt="The Next Web">
     </div>
-    <div class="sm-hide">
+    <nav class="sm-hide flex jc-space-between top-nav px-2 py-1 bg-black">
       <ul>
         <li>News</li>
         <li>Events</li>
@@ -30,17 +30,19 @@
         <li>Jobs</li>
         <li>Contact</li>
       </ul>
-    </div>
-    <ul>
-      <li>Latest</li>
-      <li>Hard fork</li>
-      <li>Plugged</li>
-      <li>Readme</li>
-      <li>Growth Quarters</li>
-      <li>Shift</li>
-      <li>Neural</li>
-      <li><i class="fas fa-search fa-flip-horizontal"></i></li>
-    </ul>
+    </nav>
+    <nav class="flex jc-space-between jc-flex-end-sm bot-nav p-2">
+      <ul class="sm-hide">
+        <li>Latest</li>
+        <li>Hard fork</li>
+        <li>Plugged</li>
+        <li>Readme</li>
+        <li>Growth Quarters</li>
+        <li>Shift</li>
+        <li>Neural</li>
+      </ul>
+      <i class="fas fa-search fa-flip-horizontal"></i>
+    </nav>
   </header>
 </body>
 
