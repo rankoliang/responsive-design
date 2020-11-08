@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&Open+Sans&family=Raleway&display=swap");
 
 /* GENERAL */
 
@@ -28,8 +28,8 @@
 }
 
 .py-1 {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .p-2 {
@@ -70,20 +70,20 @@ header ul {
 
 header ul li {
   display: inline;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 .top-nav {
   font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
-  color: hsla(0, 0%, 100%, .6);
+  font-family: "Open Sans", sans-serif;
+  color: hsla(0, 0%, 100%, 0.6);
 }
 
 .bot-nav {
   font-size: 14px;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
-  color: #AAA;
+  font-family: "Raleway", sans-serif;
+  color: #aaa;
 }
 
 .active {
@@ -98,11 +98,14 @@ header a {
 /* HEADLINES */
 
 .headlines {
+  padding-left: 10px;
+  padding-right: 10px;
   height: 700px;
   display: grid;
   grid-template-columns: 5fr 3fr;
-  grid-template-areas: "main aside1"
-                       "main aside2";
+  grid-template-areas:
+    "main aside1"
+    "main aside2";
   grid-gap: 10px;
 }
 
@@ -110,8 +113,31 @@ header a {
   grid-area: main;
 }
 
-.headlines * {
+.headlines *,
+.latest-news * {
   border: 1px solid red;
+}
+
+/* LATEST NEWS */
+
+.latest-news {
+  margin: 0 auto;
+  max-width: 1152px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+.latest-news * {
+  height: 300px;
+}
+
+.latest-news h2 {
+  font-family: "Poppins", sans-serif;
+  grid-column: 1 / -1;
+  height: auto;
+  color: #f42;
 }
 
 /* MOBILE */
@@ -131,6 +157,15 @@ header a {
       "main"
       "aside1"
       "aside2";
+    height: 90vh;
+  }
+
+  .latest-news {
+    grid-template-columns: 1fr;
+  }
+
+  .latest-news * {
+    height: 72px;
   }
 }
 
@@ -144,6 +179,14 @@ header a {
   header {
     grid-template-columns: 1fr;
   }
+
+  .latest-news {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .latest-news * {
+    height: 270px;
+  }
 }
 
 /* NOT DESKTOP */
@@ -153,4 +196,3 @@ header a {
     display: none;
   }
 }
-
