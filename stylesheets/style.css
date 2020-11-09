@@ -95,12 +95,23 @@ ul.horizontal li {
   margin: 0 0.5em;
 }
 
-ul.pipe-separated li {
+ul.pipe-separated li,
+ul.dot-separated {
   margin: 0;
 }
 
 ul.pipe-separated li:not(:last-child)::after {
   content: "|";
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+ul.dot-separated li {
+  margin: 0;
+}
+
+ul.dot-separated li:not(:last-child)::after {
+  content: "\B7";
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
@@ -138,6 +149,10 @@ ul.pipe-separated li:not(:last-child)::after {
 
 .bg-light-black {
   background: #131313;
+}
+
+.gray {
+  color: #aaa;
 }
 
 /* HEADER */
@@ -257,6 +272,12 @@ article p {
     url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Untitled-design-15-796x417.jpg");
 }
 
+/* Latest-news */
+
+.latest-news img {
+  width: 100%;
+}
+
 /* GRID */
 
 .grid {
@@ -270,7 +291,6 @@ article p {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-template-rows: 1fr;
-  grid-auto-rows: 300px;
 }
 
 .grid .span-row {
@@ -280,6 +300,19 @@ article p {
 .large-grid {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+}
+
+.small-grid ul.horizontal {
+  font-size: 12px;
+}
+
+.small-grid ul.horizontal li {
+  margin-left: 0;
+}
+
+.small-grid h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Funding Rounds */
@@ -362,6 +395,19 @@ footer .info > * {
 
   .small-grid {
     grid-template-columns: 1fr;
+  }
+
+  .small-grid > article {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-gap: 10px;
+  }
+
+  .small-grid img {
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    grid-row: 1 / 3;
   }
 
   .large-grid {
