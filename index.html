@@ -1,70 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TNW</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="stylesheets/normalize.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="stylesheets/style.css"
+      type="text/css"
+      media="all"
+    />
+    <script
+      src="https://kit.fontawesome.com/3acba5e40e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>TNW</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css" media="all">
-  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all">
-  <script src="https://kit.fontawesome.com/3acba5e40e.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <header>
-    <div class="lg-hide logo bg-black">
-      <a href="https://www.thenextweb.com" class="flex jc-center ai-center"><img src="images/tnw.svg"
-          alt="The Next Web"></a>
-    </div>
-    <nav class="sm-hide flex jc-space-between top-nav px-2 py-1 bg-black">
-      <ul>
-        <li class="active"><a href="#">News</a></li>
-        <li><a href="#">Events <i class="fas fa-caret-down"></i></a></li>
-        <li><a href="#">Business <i class="fas fa-caret-down"></i></a></li>
-        <li><a href="#">AMAs</a></li>
-        <li><a href="#">Spaces</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <nav class="flex jc-space-between jc-flex-end-sm bot-nav p-2">
-      <ul class="sm-hide">
-        <li><a href="#">Latest</a></li>
-        <li><a href="#">Hard fork</a></li>
-        <li><a href="#">Plugged</a></li>
-        <li><a href="#">Readme</a></li>
-        <li><a href="#">Growth Quarters</a></li>
-        <li class="lg-only"><a href="#">Shift</a></li>
-        <li class="lg-only"><a href="#">Neural</a></li>
-      </ul>
-      <div><a href="#"><i class="fas fa-search fa-flip-horizontal"></i></a></div>
-    </nav>
-  </header>
-  <main>
-    <section class="headlines">
-      <article class="main"> </article>
-      <article></article>
-      <article></article>
-    </section>
-    <section class="latest-news">
-      <h2>
-        Latest news >
-      </h2>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-      <article></article>
-    </section>
-  </main>
-</body>
-
+  <body>
+    <header>
+      <div class="lg-hide logo bg-black">
+        <a href="https://www.thenextweb.com" class="flex jc-center ai-center"
+          ><img src="images/tnw.svg" alt="The Next Web"
+        /></a>
+      </div>
+      <nav class="sm-hide flex jc-space-between top-nav px-2 py-1 bg-black">
+        <ul class="horizontal">
+          <li class="active"><a href="#">News</a></li>
+          <li>
+            <a href="#">Events <i class="fas fa-caret-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Business <i class="fas fa-caret-down"></i></a>
+          </li>
+          <li><a href="#">AMAs</a></li>
+          <li><a href="#">Spaces</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+        <ul class="horizontal">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="flex jc-space-between jc-flex-end-sm bot-nav p-2">
+        <ul class="sm-hide horizontal">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Hard fork</a></li>
+          <li><a href="#">Plugged</a></li>
+          <li><a href="#">Readme</a></li>
+          <li><a href="#">Growth Quarters</a></li>
+          <li class="lg-only"><a href="#">Shift</a></li>
+          <li class="lg-only"><a href="#">Neural</a></li>
+        </ul>
+        <div>
+          <a href="#"><i class="fas fa-search fa-flip-horizontal"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="headlines">
+        <article class="main"></article>
+        <article></article>
+        <article></article>
+      </section>
+      <section class="latest-news small-grid">
+        <h2 class="red span-row height-auto">Latest news ></h2>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+      </section>
+      <section class="funding-rounds small-grid">
+        <div class="red span-row flex jc-space-between height-auto">
+          <h2 class="m-0">Latest funding rounds on Index.co ></h2>
+          <ul class="horizontal pipe-separated">
+            <li><a href="#">Add info</a></li>
+            <li><a href="#">Get updates by email</a></li>
+            <li><a href="#">See more</a></li>
+          </ul>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </main>
+  </body>
 </html>

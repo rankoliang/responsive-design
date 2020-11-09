@@ -2,6 +2,10 @@
 
 /* GENERAL */
 
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
 .flex {
   display: flex;
 }
@@ -41,6 +45,41 @@
   color: white;
 }
 
+.m-0 {
+  margin: 0;
+}
+
+.red {
+  color: #f42;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+ul.horizontal {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+ul.horizontal li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+ul.pipe-separated li {
+  margin: 0;
+}
+
+ul.pipe-separated li:not(:last-child) {
+  content: "|";
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
 /* HEADER */
 
 header {
@@ -62,20 +101,8 @@ header .logo img {
   height: 16px;
 }
 
-header ul {
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-header ul li {
-  display: inline;
-  margin: 0 0.5em;
-}
-
 .top-nav {
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
   color: hsla(0, 0%, 100%, 0.6);
 }
 
@@ -90,9 +117,14 @@ header ul li {
   color: white;
 }
 
-header a {
+header a,
+.small-grid a {
   text-decoration: none;
   color: inherit;
+}
+
+.height-auto {
+  height: auto;
 }
 
 /* HEADLINES */
@@ -114,30 +146,37 @@ header a {
 }
 
 .headlines *,
-.latest-news * {
+.small-grid > * {
   border: 1px solid red;
 }
 
-/* LATEST NEWS */
+/* GRID */
 
-.latest-news {
+.small-grid {
   margin: 0 auto;
   max-width: 1152px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding: 20px;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 300px;
 }
 
-.latest-news * {
-  height: 300px;
-}
-
-.latest-news h2 {
-  font-family: "Poppins", sans-serif;
+.small-grid .span-row {
   grid-column: 1 / -1;
+}
+
+.small-grid .height-auto {
   height: auto;
-  color: #f42;
+}
+
+/* Funding Rounds */
+
+.funding-rounds {
+  grid-template-rows: auto 300px;
+  grid-auto-rows: 0;
+  overflow-y: hidden;
 }
 
 /* MOBILE */
@@ -160,12 +199,12 @@ header a {
     height: 90vh;
   }
 
-  .latest-news {
+  .small-grid {
     grid-template-columns: 1fr;
   }
 
-  .latest-news * {
-    height: 72px;
+  .latest-news {
+    grid-auto-rows: 72px;
   }
 }
 
@@ -180,12 +219,9 @@ header a {
     grid-template-columns: 1fr;
   }
 
-  .latest-news {
+  .small-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .latest-news * {
-    height: 270px;
+    grid-auto-rows: 270px;
   }
 }
 
