@@ -125,14 +125,36 @@ ul.dot-separated li:not(:last-child)::after {
   margin: 0 auto;
 }
 
-.upper {
+.upper,
+.bot-nav a {
   text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+.float-left {
+  float: left;
+}
+
+.list-style-none {
+  list-style-type: none;
+}
+
+.border-top-red {
+  border-top: 1px solid rgba(255, 68, 34, .25);
 }
 
 /* COLORS */
 
 .red {
   color: #f42;
+}
+
+.bg-red {
+  background: #f42;
+}
+
+.bg-pink {
+  background: #ff442214;
 }
 
 .white {
@@ -318,9 +340,16 @@ article p {
 /* Funding Rounds */
 
 .funding-rounds {
-  grid-template-rows: auto 300px;
-  grid-auto-rows: 0;
-  overflow-y: hidden;
+  grid-template-rows: auto auto;
+}
+
+.funding-rounds li {
+  font-size: 13px;
+}
+
+.funding-rounds p {
+  font-size: 13px;
+  line-height: 1.5rem;
 }
 
 /* Categories */
