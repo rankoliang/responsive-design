@@ -261,11 +261,6 @@ footer a {
   grid-area: main;
 }
 
-.headlines > *,
-.grid > * {
-  border: 1px solid red;
-}
-
 .headlines > article {
   background-size: cover;
   display: flex;
@@ -355,6 +350,10 @@ article p {
   margin-bottom: 0.5rem;
 }
 
+.strike-through {
+  text-decoration: line-through;
+}
+
 /* Funding Rounds */
 
 .funding-rounds {
@@ -408,6 +407,12 @@ article p {
   color: #f42;
 }
 
+/* Deals */
+
+.deals img {
+  width: 100%;
+}
+
 /* Footer */
 
 footer {
@@ -453,7 +458,7 @@ footer .info > * {
     grid-template-columns: 1fr;
   }
 
-  .small-grid > article {
+  .small-grid > article, .deal {
     display: grid;
     grid-template-columns: 75px 1fr;
     grid-gap: 10px;
