@@ -246,7 +246,7 @@ header a,
     grid-template-columns: 1fr;
   }
 
-  .latest-news {
+  .mobile-compact {
     grid-auto-rows: 72px;
   }
 
@@ -280,6 +280,8 @@ header a,
     flex-direction: column-reverse;
   }
 }
+
+/* NON MOBILE */
 
 @media screen and (min-width: 768px) {
   ul.nm-horizontal {
